@@ -22,7 +22,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
 
   request(options, function(err, res, body) {
     if (err) {
-       console.log("error occured:", err);
+       console.log("Error occured:", err);
        } else if (res.statusCode === 200) {
         var data = JSON.parse(body);
         cb(err, data);
